@@ -73,7 +73,7 @@ library(gmodels)
 CrossTable(x = wbcd_test_labels, y = wbcd_test_pred,
            prop.chisq=FALSE)
 
-## 8. Trying to improve model performance ----
+## A. Trying to improve model performance ----
 
 # use the scale() function to z-score standardize a data frame
 wbcd_z <- as.data.frame(scale(wbcd[-1]))
@@ -93,7 +93,7 @@ wbcd_test_pred <- knn(train = wbcd_train, test = wbcd_test,
 CrossTable(x = wbcd_test_labels, y = wbcd_test_pred,
            prop.chisq=FALSE)
 
-# 9: try several different values of k
+# B. try several different values of k
 wbcd_train <- wbcd_n[1:469, ]
 wbcd_test <- wbcd_n[470:569, ]
 
